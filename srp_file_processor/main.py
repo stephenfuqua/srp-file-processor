@@ -5,7 +5,7 @@ import sys
 from dotenv import load_dotenv
 
 from file_reader import read
-from analyzer import change_in_study_circle_participation
+from analyzer import changes_in_core_activities
 
 logger: logging.Logger
 
@@ -42,7 +42,7 @@ def main():
     print(df.head())
 
     logger.info("Analyzing data")
-    change_sc = change_in_study_circle_participation(df)
+    change_sc = changes_in_core_activities(df)
     print(change_sc.head())
 
     logger.info("Finished with file processing.")

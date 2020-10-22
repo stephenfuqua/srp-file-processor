@@ -9,13 +9,13 @@ def _get_change(
     return df.loc[end_index, book] - df.loc[start_index, book]
 
 
-def change_in_study_circle_participation(df: pd.DataFrame) -> pd.DataFrame:
+def changes_in_core_activities(df: pd.DataFrame) -> pd.DataFrame:
 
     changes = pd.DataFrame(index=df["cluster_name"].unique())
     changes["grouping"] = None
     changes["cluster_name"] = changes.index
 
-    for c in constants.STUDY_CIRCLE_PARTICIPATION_COLUMNS:
+    for c in constants.ANALYZE_PARTICIPATION_COLUMNS:
         changes[c] = None
 
     for cluster in changes.index:
@@ -29,7 +29,7 @@ def change_in_study_circle_participation(df: pd.DataFrame) -> pd.DataFrame:
 
             changes["grouping"] = df.loc[start_index, "grouping"]
 
-            for c in constants.STUDY_CIRCLE_PARTICIPATION_COLUMNS:
+            for c in constants.ANALYZE_PARTICIPATION_COLUMNS:
                 changes.loc[cluster, c] = _get_change(df, start_index, end_index, c)
         else:
             # Only interested in the clusters with multiple cycles

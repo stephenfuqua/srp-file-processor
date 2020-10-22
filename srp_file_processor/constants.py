@@ -53,7 +53,7 @@ CGP_HEADERS = [
     "holy_days_attendance",
 ]
 
-STUDY_CIRCLE_PARTICIPATION_COLUMNS = [
+ANALYZE_PARTICIPATION_COLUMNS = [
     "completed_book_1",
     "completed_book_2",
     "completed_book_3_1",
@@ -72,6 +72,18 @@ STUDY_CIRCLE_PARTICIPATION_COLUMNS = [
     "completed_book_10_1",
     "completed_book_10_2",
     "completed_book_10_3",
+    "devotional_count",
+    "devotional_attendance",
+    "devotional_friends",
+    "children_class_count",
+    "children_class_attendance",
+    "childrenclass_friends",
+    "junior_youth_count",
+    "junior_youth_attendance",
+    "junior_youth_friends",
+    "study_circle_count",
+    "study_circle_attendance",
+    "study_circle_friends",
 ]
 
 CLUSTER_NAME = "cluster_name"
