@@ -53,6 +53,27 @@ CGP_HEADERS = [
     "holy_days_attendance",
 ]
 
+STUDY_CIRCLE_PARTICIPATION_COLUMNS = [
+    "completed_book_1",
+    "completed_book_2",
+    "completed_book_3_1",
+    "completed_book_3_2",
+    "completed_book_3_3",
+    "completed_book_4",
+    "completed_book_5",
+    "completed_book_6",
+    "completed_book_7",
+    "completed_book_8_1",
+    "completed_book_8_2",
+    "completed_book_8_3",
+    "completed_book_9_1",
+    "completed_book_9_2",
+    "completed_book_9_3",
+    "completed_book_10_1",
+    "completed_book_10_2",
+    "completed_book_10_3",
+]
+
 CLUSTER_NAME = "cluster_name"
 GROUPING = "grouping"
 
