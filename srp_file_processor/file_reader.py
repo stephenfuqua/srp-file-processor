@@ -54,8 +54,16 @@ def _add_grouping(df: pd.DataFrame) -> pd.DataFrame:
     return df
 
 
-def read_cgp(file):
-    df = _read_workbook(file, "All Cycles", 2, constants.CGP_HEADERS)
+def read_cgp_all_cycles(file):
+    df = _read_workbook(file, "All Cycles", 3, constants.CGP_HEADERS)
+    df = _normalize_cluster_name(df)
+    df = _add_grouping(df)
+
+    return df
+
+
+def read_cgp_latest(file):
+    df = _read_workbook(file, "Latest Cycle", 2, constants.CGP_HEADERS)
     df = _normalize_cluster_name(df)
     df = _add_grouping(df)
 

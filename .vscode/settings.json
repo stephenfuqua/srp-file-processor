@@ -9,11 +9,14 @@
     ],
     "python.linting.pylintEnabled": false,
     "python.formatting.provider": "black",
-    "python.testing.pytestEnabled": true,
+    "python.testing.pytestEnabled": false,
     "python.venvPath": ".venv/Scripts/python",
     "python.dataScience.jupyterServerURI": "local",
     "cSpell.words": [
         "MSSQL",
         "pytest"
-    ]
+    ],
+    "python.testing.promptToConfigure": false,
+    "python.testing.unittestEnabled": false,
+    "python.testing.nosetestsEnabled": false
 }
