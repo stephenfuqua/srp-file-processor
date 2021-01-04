@@ -8,6 +8,13 @@ Python utilities for processing and reporting on data exported from SRP Online.
 * Developed using [Poetry](https://python-poetry.org) instead of directly using
   pip; a pip requirements file has been generated for those who do not wish to
   install poetry. Instructions for running with either will be provided below.
+* These tools utilize the Excel spreadsheet exports from SRP, while logged in as
+  user with access to the entire region:
+  * For [Book 1 Analysis](srp_file_processor/book1.ipynb), export both the In
+    Progress activities and the Completed activities. Modify the first cell in
+    the notebook to refer to the correct file names.
+  * For the [Grouping Report](srp_file_processor/grouping.ipynb), export the
+    current Cluster Growth Profile report.
 
 ### Poetry
 
