@@ -2,30 +2,20 @@ import re
 from typing import List
 
 import pandas as pd
-import xlrd3 as xlrd
 
 import constants
 
 
 def _read_workbook(file: str, sheet_name: str, num_header_rows: int, columns: List[str]) -> pd.DataFrame:
-    book = xlrd.open_workbook(file)
-    sheet = book.sheet_by_name(sheet_name)
+    df = pd.read_excel(
+        file,
+        sheet_name=sheet_name,
+        skiprows=num_header_rows,
+        engine='openpyxl'
+    )
 
-    # Note that the SRP excel spreadsheets have a multi-row header on them. Instead
-    # of trying to read the headers, we will hard-code the header values and skip
-    # the first n rows.
-    cycle_data = list()
-    for i in range(num_header_rows + 1, sheet.nrows):
-        in_row = sheet.row(i)
-
-        out_row = list()
-        cycle_data.append(out_row)
-
-        for j in range(sheet.ncols):
-            out_row.append(in_row[j].value)
-
-    df = pd.DataFrame(cycle_data)
     df.columns = columns
+    df.fillna(0, inplace=True)
 
     return df
 
