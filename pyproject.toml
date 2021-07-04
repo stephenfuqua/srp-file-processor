@@ -18,6 +18,7 @@ jupyter = "^1.0.0"
 pandoc = "^1.0.2"
 ipywidgets = "^7.5.1"
 matplotlib = "^3.3.4"
+openpyxl = "^3.0.7"
 
 [tool.poetry.dev-dependencies]
 pytest = "^6.1.1"
